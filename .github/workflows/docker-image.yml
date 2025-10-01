@@ -10,7 +10,7 @@ jobs:
 
   build:
     # Run build on our self-hosted runner, we had trouble with shared runners
-    runs-on: [self-hosted, linux, x64]
+    runs-on: ubuntu:latest
     permissions:
       contents: read
       packages: write
@@ -79,7 +79,7 @@ jobs:
         cosign sign --yes "${DOCKERHUB_TAG_UNPRIVILEGED}@${DIGEST}"
 
   build-gpu:
-    runs-on: [self-hosted, linux, x64]
+    runs-on: ubuntu:latest
     permissions:
       contents: read
       packages: write
