@@ -8,7 +8,7 @@ authors = [
 ]
 readme = "README.md"
 homepage = "https://qdrant.tech/"
-repository = "https://github.com/qdrant/qdrant"
+repository = "https://github.com/mfranzin/qdrant"
 license = "Apache-2.0"
 edition = "2024"
 rust-version = "1.88"

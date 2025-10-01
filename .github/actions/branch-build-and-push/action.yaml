@@ -61,12 +61,12 @@ runs:
         # Build base tags array
         tags=()
         if [ "${{ inputs.push-to-ghcr }}" = "true" ]; then
-          tags+=("ghcr.io/qdrant/qdrant:${branch}-${GIT_COMMIT_ID}")
-          tags+=("ghcr.io/qdrant/qdrant:${branch}")
+          tags+=("ghcr.io/mfranzin/qdrant:${branch}-${GIT_COMMIT_ID}")
+          tags+=("ghcr.io/mfranzin/qdrant:${branch}")
         fi
         if [ "${{ inputs.push-to-dockerhub }}" = "true" ]; then
           # Don't push commit tag to Docker Hub to avoid excessive image creation
-          tags+=("qdrant/qdrant:${branch}")
+          tags+=("mfranzin/qdrant:${branch}")
         fi
 
         # Exit if no tags to build
