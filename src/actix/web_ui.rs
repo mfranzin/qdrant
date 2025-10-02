@@ -8,7 +8,7 @@ use actix_web::web;
 use crate::settings::Settings;
 
 const DEFAULT_STATIC_DIR: &str = "./static";
-pub const WEB_UI_PATH: &str = "/dashboard";
+pub const WEB_UI_PATH: &str = "/qdrant/dashboard";
 
 pub fn web_ui_folder(settings: &Settings) -> Option<String> {
     let web_ui_enabled = settings.service.enable_static_content.unwrap_or(true);
