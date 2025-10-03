@@ -18,6 +18,8 @@ _interrupt () {
 
 trap _interrupt SIGINT
 
+source tools/sync-web-ui.sh
+
 ./qdrant $@ &
 
 # Get PID for the traps
